@@ -1,246 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!--
-    README (short):
-    - Colors & fonts are in /assets/css/styles.css under :root variables.
-    - Edit content here; style/behavior in the CSS/JS files.
-    - Replace /assets/resume.pdf with your real resume.
-  -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Suprabhath Reddy K — Cloud Engineer</title>
-  <meta name="description" content="Cloud Engineer skilled in AWS, Azure, GCP, Terraform, Kubernetes, and secure CI/CD." />
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Suprabhath Reddy K — Cloud Engineer" />
-  <meta property="og:description" content="Cloud Engineer skilled in AWS, Azure, GCP, Terraform, Kubernetes, and secure CI/CD." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Fonts: Inter (body) + Manrope (headings) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-</head>
-<body>
-  <header>
-    <div class="container nav">
-      <div class="brand" aria-label="Home">
-        <div class="logo" aria-hidden="true"></div>
-        <div>Suprabhath Reddy K</div>
-      </div>
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="theme">
-        <button id="themeToggle" aria-label="Toggle theme">☾/☼</button>
-      </div>
+<!-- Just before </body> -->
+<div class="customizer" id="customizer" aria-hidden="true">
+  <div class="customizer__card" role="dialog" aria-modal="true" aria-labelledby="custTitle">
+    <div class="customizer__head">
+      <h3 id="custTitle">Theme Customizer</h3>
+      <button id="closeCustomizer" aria-label="Close">✕</button>
     </div>
-  </header>
 
-  <main>
-    <section class="hero container" id="home">
-      <h1 class="title">Hi, I'm <span class="gradient-text">Suprabhath Reddy K</span></h1>
-      <p class="subtitle">Cloud Engineer • AWS · Azure · GCP · Terraform · Kubernetes · CI/CD</p>
-      <p class="subtitle">I design, automate, and optimize cloud platforms with secure, reliable delivery.</p>
-      <div class="cta">
-        <a class="btn primary" href="#contact">Contact Me</a>
-        <a class="btn" href="/assets/resume.pdf" id="resumeLink" download>Download Résumé</a>
-      </div>
-    </section>
+    <div class="customizer__grid">
+      <!-- Brand -->
+      <label>Primary
+        <input type="color" id="var--primary">
+      </label>
+      <label>Accent
+        <input type="color" id="var--primary-2">
+      </label>
 
-    <section id="about">
-      <div class="container grid cols-2">
-        <div>
-          <h2 class="section-title">About</h2>
-          <div class="card">
-            <p>
-              Experienced <strong>Cloud Engineer</strong> with 7+ years designing, automating, and optimizing
-              mission-critical deployments across <strong>AWS</strong>, <strong>Azure</strong>, and <strong>GCP</strong>.
-              Strong in <strong>IaC</strong> (Terraform/CloudFormation), <strong>CI/CD</strong> (Jenkins, Azure DevOps, CodePipeline),
-              and <strong>Kubernetes</strong> (EKS/AKS/ECS). I focus on reliability, security, and measurable outcomes.
-            </p>
-            <ul>
-              <li>Cut deployment cycles and improved release reliability with blue-green/canary strategies.</li>
-              <li>Built reusable Terraform modules and standardized cloud foundations and guardrails.</li>
-              <li>Hardened platforms with IAM, secrets management, and policy checks integrated in CI.</li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <h2 class="section-title">Highlights</h2>
-          <div class="grid cols-1">
-            <div class="card">
-              <div class="taglist">
-                <span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span>
-                <span class="tag">Terraform</span><span class="tag">CloudFormation</span><span class="tag">ARM</span>
-                <span class="tag">Jenkins</span><span class="tag">Azure DevOps</span><span class="tag">CodePipeline</span>
-                <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">EKS</span><span class="tag">AKS</span>
-              </div>
-            </div>
-            <div class="card">
-              <p class="muted">Based in: <strong>India / Remote</strong> • Open to opportunities</p>
-              <p>Email: <a href="mailto:Suprabhath.om@gmail.com">Suprabhath.om@gmail.com</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <!-- Surfaces -->
+      <label>Background
+        <input type="color" id="var--bg">
+      </label>
+      <label>Soft Background
+        <input type="color" id="var--bg-soft">
+      </label>
+      <label>Card
+        <input type="color" id="var--card">
+      </label>
+      <label>Border
+        <input type="color" id="var--border">
+      </label>
 
-    <section id="skills">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="grid cols-3">
-          <div class="card">
-            <div class="skill-cat">Operating Systems</div>
-            <div class="skill-tags">
-              <span class="tag">Windows 2012/2016</span><span class="tag">Linux (RHEL/CentOS)</span><span class="tag">Ubuntu</span>
-            </div>
-            <div class="skill-cat">Cloud</div>
-            <div class="skill-tags">
-              <span class="tag">OpenStack</span><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">PCF</span><span class="tag">GCP</span>
-            </div>
-            <div class="skill-cat">Web Servers</div>
-            <div class="skill-tags">
-              <span class="tag">Apache</span><span class="tag">Tomcat</span><span class="tag">JBoss</span><span class="tag">WebLogic</span><span class="tag">Nginx</span><span class="tag">IIS</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="skill-cat">Automation</div>
-            <div class="skill-tags">
-              <span class="tag">Jenkins</span><span class="tag">Chef</span><span class="tag">Ansible</span><span class="tag">Vagrant</span>
-              <span class="tag">Terraform</span><span class="tag">JMeter</span><span class="tag">CloudFormation</span><span class="tag">ARM Templates</span><span class="tag">VSTS</span>
-            </div>
-            <div class="skill-cat">Databases</div>
-            <div class="skill-tags">
-              <span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">AWS RDS</span><span class="tag">DynamoDB</span>
-            </div>
-            <div class="skill-cat">Containers & Orchestration</div>
-            <div class="skill-tags">
-              <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">AKS</span><span class="tag">EKS</span>
-              <span class="tag">ECS</span><span class="tag">ACS</span><span class="tag">Apache Mesos</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="skill-cat">Monitoring</div>
-            <div class="skill-tags">
-              <span class="tag">Splunk</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">CloudWatch</span><span class="tag">Nagios</span><span class="tag">New Relic</span>
-            </div>
-            <div class="skill-cat">Virtualization</div>
-            <div class="skill-tags">
-              <span class="tag">VMware vSphere</span><span class="tag">Hyper-V</span><span class="tag">Vagrant</span>
-            </div>
-            <div class="skill-cat">Scripting & SCM</div>
-            <div class="skill-tags">
-              <span class="tag">Perl</span><span class="tag">Python</span><span class="tag">Ruby</span><span class="tag">Bash</span><span class="tag">PowerShell</span><span class="tag">JSON</span>
-              <span class="tag">Git</span><span class="tag">Subversion</span><span class="tag">CVS</span><span class="tag">Bitbucket</span><span class="tag">TFS</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <h2 class="section-title">Experience</h2>
-        <div class="grid cols-3">
-          <div class="card xp">
-            <h4>Senior Cloud Engineer — Bank of Texas</h4>
-            <small>Feb 2024 – Present • Dallas (Remote)</small>
-            <ul>
-              <li>Standardized AWS foundations with Terraform/CloudFormation (VPC, IAM, ALB/NLB, RDS).</li>
-              <li>Implemented CI/CD with CodePipeline/CodeBuild and Jenkins; enabled blue-green/canary on EKS/ECS.</li>
-              <li>Improved DR with AWS Backup and multi-AZ patterns; enhanced visibility with CloudWatch/Splunk.</li>
-            </ul>
-          </div>
-          <div class="card xp">
-            <h4>Cloud Engineer — Mount Sinai</h4>
-            <small>Jul 2022 – Jan 2024 • Remote</small>
-            <ul>
-              <li>Delivered Azure VNets, ARM/Terraform stacks, and AKS with Helm; integrated Azure DevOps pipelines.</li>
-              <li>Hardened access with Azure AD/Key Vault; added policy guardrails and RBAC.</li>
-              <li>Built Prometheus/Grafana dashboards; validated resiliency with targeted chaos runs.</li>
-            </ul>
-          </div>
-          <div class="card xp">
-            <h4>DevOps Engineer — DHL</h4>
-            <small>Mar 2018 – Apr 2022 • Hyderabad</small>
-            <ul>
-              <li>Built Jenkins-driven CI/CD; standardized branching, artifact, and deployment processes.</li>
-              <li>Introduced Docker into pipelines; supported config mgmt with Puppet and scripting.</li>
-              <li>Improved release cadence and reliability; integrated Jira/webhooks and monitoring.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="grid cols-2">
-          <div class="card">
-            <p>Interested in collaborating or hiring? Drop a note here or email me directly.</p>
-            <form action="https://formspree.io/f/your-id" method="POST" id="contactForm" novalidate>
-              <label>
-                <span class="muted">Name</span>
-                <input type="text" name="name" placeholder="Your name" required>
-              </label>
-              <label>
-                <span class="muted">Email</span>
-                <input type="email" name="email" placeholder="you@example.com" required>
-              </label>
-              <label>
-                <span class="muted">Message</span>
-                <textarea name="message" rows="5" placeholder="How can I help?" required></textarea>
-              </label>
-              <button class="btn primary" type="submit">Send Message</button>
-              <p id="formMsg" class="muted" aria-live="polite"></p>
-            </form>
-          </div>
-          <div class="card">
-            <p><strong>Email:</strong> <a href="mailto:Suprabhath.om@gmail.com">Suprabhath.om@gmail.com</a></p>
-            <p><strong>Social:</strong> <a href="#" aria-label="LinkedIn">LinkedIn</a> · <a href="#" aria-label="GitHub">GitHub</a></p>
-            <p class="muted">I’m open to roles and projects — especially cloud platform engineering and DevOps automation.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div>© <span id="year"></span> Suprabhath Reddy K • Cloud Engineer</div>
+      <!-- Text -->
+      <label>Text
+        <input type="color" id="var--fg">
+      </label>
+      <label>Muted Text
+        <input type="color" id="var--muted">
+      </label>
     </div>
-  </footer>
 
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Suprabhath Reddy K",
-    "jobTitle": "Cloud Engineer",
-    "email": "mailto:Suprabhath.om@gmail.com",
-    "url": "",
-    "knowsAbout": ["AWS","Azure","GCP","Terraform","CloudFormation","Kubernetes","Jenkins","Azure DevOps","CodePipeline"],
-    "worksFor": {"@type":"Organization","name":"Bank of Texas (current)"}
-  }
-  </script>
-
-  <script src="/assets/js/main.js"></script>
-</body>
-</html>
+    <div class="customizer__actions">
+      <select id="presetSelect" aria-label="Color presets">
+        <option value="">Presets…</option>
+        <option value="ocean">Ocean (Blue)</option>
+        <option value="teal">Teal</option>
+        <option value="violet">Violet</option>
+        <option value="sunset">Sunset</option>
+      </select>
+      <button id="saveTheme" class="btn primary">Save</button>
+      <button id="resetTheme" class="btn">Reset</button>
+      <span id="custMsg" class="muted" aria-live="polite"></span>
+    </div>
+  </div>
+</div>
