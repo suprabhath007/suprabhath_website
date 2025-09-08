@@ -1,3 +1,37 @@
+:root {
+  --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-heading: "Manrope", Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  --bg: #0f0a1a;
+  --bg-soft: #160e26;
+  --fg: #efeaff;
+  --muted: #b9a9f2;
+
+  --primary: #7c3aed;    /* violet-600 */
+  --primary-2: #a78bfa;  /* violet-300 */
+
+  --card: #1a1030;
+  --border: #2a1f4d;
+
+  --shadow: 0 1px 2px rgba(12, 6, 25, .55), 0 8px 24px rgba(12, 6, 25, .35);
+  --shadow-lg: 0 8px 16px rgba(12, 6, 25, .25), 0 24px 48px rgba(12, 6, 25, .35);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #faf7ff;
+    --bg-soft: #f2ecff;
+    --fg: #1e1236;
+    --muted: #5d4b8f;
+    --card: #ffffff;
+    --border: #e8defa;
+  }
+}
+[data-theme="light"] {
+  --bg: #faf7ff; --bg-soft:#f2ecff; --fg:#1e1236; --muted:#5d4b8f; --card:#ffffff; --border:#e8defa;
+}
+
+
+
 /* === Theme Customizer === */
 .customizer {
   position: fixed; inset: 0;
